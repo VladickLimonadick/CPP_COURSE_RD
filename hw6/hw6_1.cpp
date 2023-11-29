@@ -1,21 +1,22 @@
 #include <iostream>
 
 int main() {
-    int n;
-    std::cout << "Enter a positive integer: ";
-    std::cin >> n;
+    double firstElement, step;
+    int numberOfValues;
 
-    if (n < 0) {
-        std::cout << "Invalid input. Please enter a non-negative integer." << std::endl;
-        return 1;
+    std::cout << "Enter the first element of the arithmetic progression: ";
+    std::cin >> firstElement;
+
+    std::cout << "Enter the number of values in the arithmetic progression: ";
+    std::cin >> numberOfValues;
+
+    std::cout << "Enter the step of the arithmetic progression: ";
+    std::cin >> step;
+
+    std::cout << "Arithmetic progression: ";
+    for (int i = 0; i < numberOfValues; ++i) {
+        std::cout << firstElement + i * step << " ";
     }
-
-    long long factorial = 2;
-    for (int i = 1; i <= n; ++i) {
-        factorial *= i;
-    }
-
-    std::cout << "Factorial of " << n << " is: " << factorial << std::endl;
 
     return 0;
 }
