@@ -7,20 +7,20 @@ long long fibonacci(int n) {
     else if (n <= 2) {
         return 1;
     }
-    else {
-        long long a = 1, b = 1, result = 0;
-        for (int i = 3; i <= n; ++i) {
-            result = a + b;
-            a = b;
-            b = result;
-        }
-        return result;
+
+    long long a = 1, b = 1, result = 0;
+    for (int i = 3; i <= n; ++i) {
+        result = a + b;
+        a = b;
+        b = result;
     }
+
+    return result;
 }
 
 int main() {
     int n;
-    std::cout << "Enter the number of the Fibonacci sequence element(maximum 191): ";
+    std::cout << "Enter the number of the Fibonacci sequence element (maximum 191): ";
     std::cin >> n;
 
     if (n < 1) {
